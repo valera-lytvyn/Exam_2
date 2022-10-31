@@ -1,0 +1,283 @@
+.projects {
+
+   .projectsTitle {
+      margin: 100px 0;
+      height: 75px;
+      @include font(44px, $ff, 700, normal, 119px, $color_dblue);
+      text-transform: uppercase;
+      text-align: center;
+      vertical-align: bottom;
+
+      @include _768 {
+         margin: 40px 0;
+         font-size: 28px;
+      }
+
+      @include _576 {
+         margin: 20px 0;
+         font-size: 24px;
+         line-height: 24px;
+         height: 40px;
+         vertical-align: middle;
+      }
+   }
+
+   .projectsContent {
+
+      .wrapPartOne {
+
+
+         .bgBlue {
+            @include size(470px, 580px);
+            background: #55b7ff;
+            position: absolute;
+
+            @include _1024 {
+               display: none;
+            }
+         }
+
+         .photoTradeCenter {
+            position: relative;
+            z-index: 100;
+            @include size($h, $w);
+            max-height: 470px;
+            margin-top: 45px;
+            background: url(../img/projects_1.jpg) no-repeat center;
+            background-size: cover;
+
+            @include _768 {
+               height: 250px;
+               margin-top: 0;
+            }
+         }
+
+         .description {
+            height: 100%;
+            margin: 130px 20px 60px 70px;
+
+            @include _1024 {
+               margin-left: 20px;
+            }
+
+            @include _768 {
+               margin: 20px 10px;
+            }
+
+            .titleStringFirst {
+               @include font(22px, $ffBook, 400, normal, 22px, $color_dblue);
+               text-transform: uppercase;
+
+               @include _768 {
+                  text-align: center;
+               }
+            }
+
+            .titleStringSecond {
+               margin: 15px 0 40px 0;
+               @include font(44px, $ff, 700, normal, 46px, $color_dblue);
+               text-transform: uppercase;
+
+               @include _768 {
+                  font-size: 28px;
+                  line-height: 30px;
+                  text-align: center;
+               }
+
+               @include _576 {
+                  font-size: 22px;
+                  line-height: 24px;
+               }
+            }
+         }
+
+         .descriptionText {
+            @include font(18px, "Open Sans", 400, normal, 30px, $color_dgrey);
+
+            @include _768 {
+               text-align: center;
+            }
+         }
+
+         .descriptionButton {
+            margin-top: 40px;
+            @include size(50px, 190px);
+            border: 1px solid $color_dblue;
+            @include font(14px, $ffBook, 400, normal, 50px, $color_dblue);
+            text-transform: uppercase;
+            text-align: center;
+
+            @include _768 {
+               margin: 10px auto;
+            }
+
+            &:hover {
+               box-shadow: inset 1px 1px 20px 0px $color_purple;
+               font-size: 18px;
+               border: 1px solid $color_purple;
+
+            }
+         }
+
+         .location {
+            margin: 65px 0;
+            display: flex;
+            justify-content: flex-start;
+
+            @include _768 {
+               display: flex;
+               justify-content: center;
+               margin: 15px 0;
+            }
+
+            .locationLogo {
+               line-height: 18px;
+               height: 18px;
+            }
+
+            .locationDescription {
+               margin-left: 5px;
+               @include font(18px, "Open Sans", 400, normal, 18px, $color_dblue);
+               font-style: italic;
+            }
+         }
+      }
+
+      .wrapPartTwo {
+         margin-top: 190px;
+
+         .bgPurple {
+            @include size(470px, 580px);
+            background: $color_purple;
+            position: absolute;
+            right: 0;
+
+         }
+
+         @media (max-width:1024px) {
+            .bgPurple {
+               display: none;
+            }
+         }
+
+         .photoTradeCenter {
+            position: relative;
+            z-index: 100;
+            @include size($h, $w);
+            // min-height: 425px;
+            max-height: 470px;
+            margin-top: 45px;
+            background: url(../img/projects_2.jpg) no-repeat center;
+            background-size: cover;
+         }
+
+         @media (max-width:769px) {
+            .photoTradeCenter {
+               height: 250px;
+               margin-top: 40px;
+            }
+         }
+
+         .description {
+            height: 100%;
+            margin: 130px 20px 60px 0px;
+
+
+            .titleStringFirst {
+               @include font(22px, $ffBook, 400, normal, 22px, $color_dblue);
+               text-transform: uppercase;
+            }
+
+            .titleStringSecond {
+               margin: 15px 0 40px 0;
+               @include font(44px, $ff, 700, normal, 46px, $color_dblue);
+               text-transform: uppercase;
+
+               @include _768 {
+                  font-size: 28px;
+                  line-height: 30px;
+               }
+
+               @include _576 {
+                  font-size: 22px;
+                  line-height: 24px;
+               }
+            }
+
+            @media (max-width:768px) {
+               .titleStringSecond {
+                  font-size: 28px;
+                  line-height: 30px;
+               }
+            }
+
+            .descriptionText {
+               @include font(18px, "Open Sans", 400, normal, 30px, $color_dgrey);
+
+            }
+
+            .descriptionButton {
+               margin-top: 40px;
+               @include size(50px, 190px);
+               border: 1px solid $color_dblue;
+               @include font(14px, $ffBook, 400, normal, 50px, $color_dblue);
+               text-transform: uppercase;
+               text-align: center;
+
+               &:hover {
+                  box-shadow: inset 1px 1px 20px 0px $color_purple;
+                  font-size: 18px;
+                  border: 1px solid $color_purple;
+
+               }
+            }
+
+            .location {
+               margin: 65px 0;
+               display: flex;
+               justify-content: flex-start;
+
+               .locationLogo {
+                  line-height: 18px;
+                  height: 18px;
+               }
+
+               .locationDescription {
+                  margin-left: 5px;
+                  @include font(18px, "Open Sans", 400, normal, 18px, $color_dblue);
+                  font-style: italic;
+               }
+            }
+         }
+
+         @media (max-width:769px) {
+            .description {
+               margin: 20px 10px;
+
+               .titleStringFirst {
+                  text-align: center;
+               }
+
+               .titleStringSecond {
+                  text-align: center;
+               }
+
+               .descriptionText {
+                  text-align: center;
+               }
+
+               .descriptionButton {
+                  margin: 10px auto;
+               }
+
+               .location {
+                  display: flex;
+                  justify-content: center;
+                  margin: 15px 0;
+               }
+            }
+         }
+      }
+
+   }
+}

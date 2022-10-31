@@ -1,0 +1,783 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap");
+@font-face {
+  font-family: 'gotham';
+  src: url("../fonts/gotham_font/Gotham-Book.eot");
+  src: local("Gotham Book"), local("Gotham-Book"), url("../fonts/gotham_font/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_font/Gotham-Book.woff2") format("woff2"), url("../fonts/gotham_font/Gotham-Book.woff") format("woff"), url("../fonts/gotham_font/Gotham-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block; }
+
+@font-face {
+  font-family: 'gotham';
+  src: url("../fonts/gotham_font/Gotham-Bold.eot");
+  src: local("Gotham Bold"), local("Gotham-Bold"), url("../fonts/gotham_font/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_font/Gotham-Bold.woff2") format("woff2"), url("../fonts/gotham_font/Gotham-Bold.woff") format("woff"), url("../fonts/gotham_font/Gotham-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block; }
+
+@font-face {
+  font-family: 'gotham';
+  src: url("../fonts/gotham_font/Gotham-Medium.eot");
+  src: local("Gotham Medium"), local("Gotham-Medium"), url("../fonts/gotham_font/Gotham-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham_font/Gotham-Medium.woff2") format("woff2"), url("../fonts/gotham_font/Gotham-Medium.woff") format("woff"), url("../fonts/gotham_font/Gotham-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block; }
+
+.header {
+  height: 100%;
+  width: 100%; }
+  @media (max-width: 768px) {
+    .header {
+      max-height: 450px; } }
+  @media (max-width: 576px) {
+    .header {
+      max-height: 300px; } }
+  .header .headerBackground {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, rgba(87, 185, 255, 0.65) 0%, rgba(123, 87, 255, 0.65) 100%), url(../img/header_bg.png) no-repeat center center;
+    background-size: cover; }
+    @media (max-width: 576px) {
+      .header .headerBackground .container {
+        margin-top: 15px; } }
+    @media (max-width: 991px) {
+      .header .headerBackground .container .navMenu {
+        position: fixed;
+        transform: translateY(-100%);
+        transition: transform 0.2s;
+        top: 0%;
+        left: 70%;
+        right: 1%;
+        bottom: 80%;
+        z-index: 199;
+        background: #5762ffc2;
+        box-shadow: inset 2px 2px 25px 25px #57b9ff;
+        border-radius: 5px;
+        list-style: none;
+        text-align: center;
+        padding-top: 15px; }
+        .header .headerBackground .container .navMenu a {
+          text-decoration: none;
+          font-size: 14px;
+          font-family: "gotham";
+          font-weight: 400;
+          letter-spacing: normal;
+          line-height: 34px;
+          color: #ffffff;
+          text-transform: uppercase; }
+      .header .headerBackground .container .showMenu {
+        transform: translateY(5%); }
+      .header .headerBackground .container .burgerMenuBtn {
+        position: fixed;
+        z-index: 200;
+        top: 6%;
+        right: 2%;
+        color: #57b9ff;
+        font-size: 40px;
+        cursor: pointer; } }
+  @media (max-width: 991px) and (max-width: 576px) {
+    .header .headerBackground .container .burgerMenuBtn {
+      top: 0%;
+      right: 50%;
+      left: 50%; } }
+    @media (max-width: 991px) {
+        .header .headerBackground .container .burgerMenuBtn .closeMenu {
+          display: none; } }
+    @media (min-width: 991px) {
+      .header .headerBackground .container .navMenu {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 18px;
+        font-family: "gotham";
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 55px;
+        color: #ffffff;
+        list-style: circle; }
+        .header .headerBackground .container .navMenu a {
+          text-decoration: none;
+          font-size: 14px;
+          font-family: "gotham";
+          font-weight: 400;
+          letter-spacing: normal;
+          line-height: 55px;
+          color: #ffffff;
+          text-transform: uppercase;
+          align-items: center; } }
+    @media (min-width: 991px) {
+      .header .headerBackground .container li:hover {
+        list-style: none;
+        transform: scale(1.2); }
+        .header .headerBackground .container li:hover a {
+          color: #5d1fec; } }
+    .header .headerBackground .container .social {
+      display: flex;
+      justify-content: end;
+      align-items: center; }
+      .header .headerBackground .container .social .s-logo {
+        min-height: 40px;
+        min-width: 40px;
+        border: 1px solid #d7d1ee;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px; }
+        .header .headerBackground .container .social .s-logo a {
+          color: #fff; }
+      .header .headerBackground .container .social :hover {
+        border: none;
+        transform: scale(1.2); }
+        .header .headerBackground .container .social :hover a {
+          color: #5d1fec; }
+      .header .headerBackground .container .social .tw {
+        margin: 0 20px; }
+    .header .headerBackground .container .headerText {
+      height: 100%;
+      width: 100%;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 600px; }
+      @media (max-width: 768px) {
+        .header .headerBackground .container .headerText {
+          max-height: 300px; } }
+      @media (max-width: 576px) {
+        .header .headerBackground .container .headerText {
+          margin-top: 10px;
+          max-height: 150px; } }
+      .header .headerBackground .container .headerText .headerTitle {
+        font-size: 80px;
+        font-family: "gotham";
+        font-weight: 700;
+        letter-spacing: 4px;
+        line-height: 22px;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center; }
+        @media (max-width: 1024px) {
+          .header .headerBackground .container .headerText .headerTitle {
+            font-size: 54px; } }
+        @media (max-width: 768px) {
+          .header .headerBackground .container .headerText .headerTitle {
+            font-size: 42px; } }
+        @media (max-width: 576px) {
+          .header .headerBackground .container .headerText .headerTitle {
+            font-size: 24px; } }
+      .header .headerBackground .container .headerText .headerMotto {
+        margin-top: 40px;
+        font-size: 18px;
+        font-family: "gotham";
+        font-weight: 400;
+        letter-spacing: 5px;
+        line-height: 22px;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center; }
+        @media (max-width: 576px) {
+          .header .headerBackground .container .headerText .headerMotto {
+            font-size: 14px;
+            margin: 20px 0 20px; } }
+    .header .headerBackground .container .arrowWrap {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .header .headerBackground .container .arrowWrap .arrow {
+        height: 40px;
+        width: 40px;
+        border: 1px solid #d7d1ee;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: #fff; }
+        .header .headerBackground .container .arrowWrap .arrow a {
+          color: #fff; }
+      .header .headerBackground .container .arrowWrap :hover {
+        color: #5d1fec;
+        border: none;
+        transform: scale(1.2); }
+
+.projects .projectsTitle {
+  margin: 100px 0;
+  height: 75px;
+  font-size: 44px;
+  font-family: "gotham";
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: 119px;
+  color: #2c4058;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: bottom; }
+  @media (max-width: 768px) {
+    .projects .projectsTitle {
+      margin: 40px 0;
+      font-size: 28px; } }
+  @media (max-width: 576px) {
+    .projects .projectsTitle {
+      margin: 20px 0;
+      font-size: 24px;
+      line-height: 24px;
+      height: 40px;
+      vertical-align: middle; } }
+
+.projects .projectsContent .wrapPartOne .bgBlue {
+  height: 470px;
+  width: 580px;
+  background: #55b7ff;
+  position: absolute; }
+  @media (max-width: 1024px) {
+    .projects .projectsContent .wrapPartOne .bgBlue {
+      display: none; } }
+
+.projects .projectsContent .wrapPartOne .photoTradeCenter {
+  position: relative;
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  max-height: 470px;
+  margin-top: 45px;
+  background: url(../img/projects_1.jpg) no-repeat center;
+  background-size: cover; }
+  @media (max-width: 768px) {
+    .projects .projectsContent .wrapPartOne .photoTradeCenter {
+      height: 250px;
+      margin-top: 0; } }
+
+.projects .projectsContent .wrapPartOne .description {
+  height: 100%;
+  margin: 130px 20px 60px 70px; }
+  @media (max-width: 1024px) {
+    .projects .projectsContent .wrapPartOne .description {
+      margin-left: 20px; } }
+  @media (max-width: 768px) {
+    .projects .projectsContent .wrapPartOne .description {
+      margin: 20px 10px; } }
+  .projects .projectsContent .wrapPartOne .description .titleStringFirst {
+    font-size: 22px;
+    font-family: "gothamBook";
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 22px;
+    color: #2c4058;
+    text-transform: uppercase; }
+    @media (max-width: 768px) {
+      .projects .projectsContent .wrapPartOne .description .titleStringFirst {
+        text-align: center; } }
+  .projects .projectsContent .wrapPartOne .description .titleStringSecond {
+    margin: 15px 0 40px 0;
+    font-size: 44px;
+    font-family: "gotham";
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: 46px;
+    color: #2c4058;
+    text-transform: uppercase; }
+    @media (max-width: 768px) {
+      .projects .projectsContent .wrapPartOne .description .titleStringSecond {
+        font-size: 28px;
+        line-height: 30px;
+        text-align: center; } }
+    @media (max-width: 576px) {
+      .projects .projectsContent .wrapPartOne .description .titleStringSecond {
+        font-size: 22px;
+        line-height: 24px; } }
+
+.projects .projectsContent .wrapPartOne .descriptionText {
+  font-size: 18px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 30px;
+  color: #4b5562; }
+  @media (max-width: 768px) {
+    .projects .projectsContent .wrapPartOne .descriptionText {
+      text-align: center; } }
+
+.projects .projectsContent .wrapPartOne .descriptionButton {
+  margin-top: 40px;
+  height: 50px;
+  width: 190px;
+  border: 1px solid #2c4058;
+  font-size: 14px;
+  font-family: "gothamBook";
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 50px;
+  color: #2c4058;
+  text-transform: uppercase;
+  text-align: center; }
+  @media (max-width: 768px) {
+    .projects .projectsContent .wrapPartOne .descriptionButton {
+      margin: 10px auto; } }
+  .projects .projectsContent .wrapPartOne .descriptionButton:hover {
+    box-shadow: inset 1px 1px 20px 0px #5d1fec;
+    font-size: 18px;
+    border: 1px solid #5d1fec; }
+
+.projects .projectsContent .wrapPartOne .location {
+  margin: 65px 0;
+  display: flex;
+  justify-content: flex-start; }
+  @media (max-width: 768px) {
+    .projects .projectsContent .wrapPartOne .location {
+      display: flex;
+      justify-content: center;
+      margin: 15px 0; } }
+  .projects .projectsContent .wrapPartOne .location .locationLogo {
+    line-height: 18px;
+    height: 18px; }
+  .projects .projectsContent .wrapPartOne .location .locationDescription {
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: "Open Sans";
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 18px;
+    color: #2c4058;
+    font-style: italic; }
+
+.projects .projectsContent .wrapPartTwo {
+  margin-top: 190px; }
+  .projects .projectsContent .wrapPartTwo .bgPurple {
+    height: 470px;
+    width: 580px;
+    background: #5d1fec;
+    position: absolute;
+    right: 0; }
+  @media (max-width: 1024px) {
+    .projects .projectsContent .wrapPartTwo .bgPurple {
+      display: none; } }
+  .projects .projectsContent .wrapPartTwo .photoTradeCenter {
+    position: relative;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    max-height: 470px;
+    margin-top: 45px;
+    background: url(../img/projects_2.jpg) no-repeat center;
+    background-size: cover; }
+  @media (max-width: 769px) {
+    .projects .projectsContent .wrapPartTwo .photoTradeCenter {
+      height: 250px;
+      margin-top: 40px; } }
+  .projects .projectsContent .wrapPartTwo .description {
+    height: 100%;
+    margin: 130px 20px 60px 0px; }
+    .projects .projectsContent .wrapPartTwo .description .titleStringFirst {
+      font-size: 22px;
+      font-family: "gothamBook";
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 22px;
+      color: #2c4058;
+      text-transform: uppercase; }
+    .projects .projectsContent .wrapPartTwo .description .titleStringSecond {
+      margin: 15px 0 40px 0;
+      font-size: 44px;
+      font-family: "gotham";
+      font-weight: 700;
+      letter-spacing: normal;
+      line-height: 46px;
+      color: #2c4058;
+      text-transform: uppercase; }
+      @media (max-width: 768px) {
+        .projects .projectsContent .wrapPartTwo .description .titleStringSecond {
+          font-size: 28px;
+          line-height: 30px; } }
+      @media (max-width: 576px) {
+        .projects .projectsContent .wrapPartTwo .description .titleStringSecond {
+          font-size: 22px;
+          line-height: 24px; } }
+    @media (max-width: 768px) {
+      .projects .projectsContent .wrapPartTwo .description .titleStringSecond {
+        font-size: 28px;
+        line-height: 30px; } }
+    .projects .projectsContent .wrapPartTwo .description .descriptionText {
+      font-size: 18px;
+      font-family: "Open Sans";
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 30px;
+      color: #4b5562; }
+    .projects .projectsContent .wrapPartTwo .description .descriptionButton {
+      margin-top: 40px;
+      height: 50px;
+      width: 190px;
+      border: 1px solid #2c4058;
+      font-size: 14px;
+      font-family: "gothamBook";
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 50px;
+      color: #2c4058;
+      text-transform: uppercase;
+      text-align: center; }
+      .projects .projectsContent .wrapPartTwo .description .descriptionButton:hover {
+        box-shadow: inset 1px 1px 20px 0px #5d1fec;
+        font-size: 18px;
+        border: 1px solid #5d1fec; }
+    .projects .projectsContent .wrapPartTwo .description .location {
+      margin: 65px 0;
+      display: flex;
+      justify-content: flex-start; }
+      .projects .projectsContent .wrapPartTwo .description .location .locationLogo {
+        line-height: 18px;
+        height: 18px; }
+      .projects .projectsContent .wrapPartTwo .description .location .locationDescription {
+        margin-left: 5px;
+        font-size: 18px;
+        font-family: "Open Sans";
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 18px;
+        color: #2c4058;
+        font-style: italic; }
+  @media (max-width: 769px) {
+    .projects .projectsContent .wrapPartTwo .description {
+      margin: 20px 10px; }
+      .projects .projectsContent .wrapPartTwo .description .titleStringFirst {
+        text-align: center; }
+      .projects .projectsContent .wrapPartTwo .description .titleStringSecond {
+        text-align: center; }
+      .projects .projectsContent .wrapPartTwo .description .descriptionText {
+        text-align: center; }
+      .projects .projectsContent .wrapPartTwo .description .descriptionButton {
+        margin: 10px auto; }
+      .projects .projectsContent .wrapPartTwo .description .location {
+        display: flex;
+        justify-content: center;
+        margin: 15px 0; } }
+
+.news .newsBackground {
+  height: 100%;
+  width: 100%;
+  min-height: 1050px;
+  background: url(../img/news_bg.png) no-repeat bottom center, linear-gradient(45deg, rgba(60, 128, 211, 0.65) 0%, rgba(36, 203, 249, 0.65) 100%);
+  background-size: contain;
+  position: relative; }
+  .news .newsBackground .arrowLeft {
+    position: absolute;
+    top: 50%;
+    left: 20px; }
+    .news .newsBackground .arrowLeft :hover {
+      color: #5d1fec;
+      border: none;
+      transform: scale(1.2); }
+  .news .newsBackground .circle {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #d7d1ee;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff; }
+    @media (max-width: 991px) {
+      .news .newsBackground .circle {
+        border: 1px solid #5d1fec;
+        color: #5d1fec; } }
+    @media (max-width: 768px) {
+      .news .newsBackground .circle {
+        display: none; } }
+  .news .newsBackground .newsTitle {
+    margin: 180px 0 100px 0;
+    font-size: 44px;
+    font-family: "gotham";
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 22px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center; }
+    @media (max-width: 768px) {
+      .news .newsBackground .newsTitle {
+        font-size: 28px;
+        margin: 40px 0; } }
+    @media (max-width: 576px) {
+      .news .newsBackground .newsTitle {
+        font-size: 24px; } }
+  .news .newsBackground .arrowRight {
+    position: absolute;
+    top: 50%;
+    right: 25px; }
+    .news .newsBackground .arrowRight :hover {
+      color: #5d1fec;
+      border: none;
+      transform: scale(1.2); }
+  .news .newsBackground .newscolumn {
+    background-color: #ffffff;
+    min-height: 600px; }
+    .news .newsBackground .newscolumn .newscolumnPhotoOne {
+      min-height: 240px;
+      background: url(../img/news_photo_1.jpg) center center no-repeat;
+      background-size: cover; }
+    .news .newsBackground .newscolumn .newscolumnPhotoTwo {
+      min-height: 240px;
+      background: url(../img/news_photo_2.jpg) center center no-repeat;
+      background-size: cover; }
+    .news .newsBackground .newscolumn .newscolumnPhotoThree {
+      min-height: 240px;
+      background: url(../img/news_photo_3.jpg) center center no-repeat;
+      background-size: cover; }
+    .news .newsBackground .newscolumn .newsDescription {
+      height: 100%;
+      width: calc(100% - 75px);
+      min-height: 300px;
+      margin: 30px 55px 30px 20px;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start; }
+      .news .newsBackground .newscolumn .newsDescription .newscolumnTitle {
+        font-size: 22px;
+        font-family: "gotham";
+        font-weight: 700;
+        letter-spacing: normal;
+        line-height: 22px;
+        color: #2c4058;
+        text-transform: uppercase; }
+      .news .newsBackground .newscolumn .newsDescription .newscolumnText {
+        font-size: 18px;
+        font-family: "Open Sans";
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 30px;
+        color: #4b5562; }
+      .news .newsBackground .newscolumn .newsDescription .information {
+        width: 100%;
+        display: flex; }
+        .news .newsBackground .newscolumn .newsDescription .information .infoWrap {
+          display: flex;
+          flex-direction: column; }
+        .news .newsBackground .newscolumn .newsDescription .information .autorPhoto {
+          min-width: 60px;
+          margin-right: 10px; }
+        .news .newsBackground .newscolumn .newsDescription .information .autorName {
+          font-size: 18px;
+          font-family: "gotham";
+          font-weight: 400;
+          letter-spacing: normal;
+          line-height: 22px;
+          color: #2c4058;
+          text-transform: uppercase; }
+        .news .newsBackground .newscolumn .newsDescription .information .data {
+          font-size: 14px;
+          font-family: "gotham";
+          font-weight: 400;
+          letter-spacing: normal;
+          line-height: 22px;
+          color: #55b7ff; }
+
+.galleryTitle {
+  font-size: 44px;
+  font-family: "gotham";
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 22px;
+  color: #2c4058;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 180px 0 100px; }
+  @media (max-width: 768px) {
+    .galleryTitle {
+      font-size: 28px;
+      margin: 40px 0; } }
+  @media (max-width: 576px) {
+    .galleryTitle {
+      font-size: 24px;
+      margin: 20px 0; } }
+
+.galleryTable {
+  height: 100%;
+  width: 100%; }
+  .galleryTable .pictureOne {
+    background: url(../img/gallery_1.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 576px) {
+      .galleryTable .pictureOne {
+        min-height: 215px; } }
+    .galleryTable .pictureOne .logo_360 {
+      height: 80px;
+      width: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid #fefefe;
+      border-radius: 50%;
+      position: relative; }
+      .galleryTable .pictureOne .logo_360 .vOval {
+        height: 78px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #eaf0f0;
+        border-radius: 50%;
+        position: absolute; }
+      .galleryTable .pictureOne .logo_360 .gOval {
+        height: 40px;
+        width: 78px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #eaf0f0;
+        border-radius: 50%;
+        font-size: 22px;
+        font-family: "gotham";
+        font-weight: 700;
+        letter-spacing: normal;
+        line-height: 22px;
+        color: #eaf0f0;
+        text-align: center; }
+      .galleryTable .pictureOne .logo_360:hover .gOval {
+        cursor: default;
+        transform: rotate(360deg);
+        transition: all 0.8s ease-in-out 0s;
+        font-size: 30px;
+        color: #5d1fec; }
+      .galleryTable .pictureOne .logo_360:hover .vOval {
+        cursor: default;
+        transform: rotate(360deg);
+        transition: all 0.8s ease-in-out 0s;
+        font-size: 30px; }
+  .galleryTable .pictureTwo {
+    background: url(../img/gallery_2.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 215px;
+    margin: 0 10px 5px 10px; }
+    @media (max-width: 768px) {
+      .galleryTable .pictureTwo {
+        margin: 10px 5px 5px 0px; } }
+    @media (max-width: 576px) {
+      .galleryTable .pictureTwo {
+        margin: 10px 0px 5px 0px; } }
+  .galleryTable .pictureThree {
+    background: url(../img/gallery_3.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 215px;
+    margin-bottom: 5px; }
+    @media (max-width: 768px) {
+      .galleryTable .pictureThree {
+        margin: 10px 0px 5px 5px; } }
+    @media (max-width: 576px) {
+      .galleryTable .pictureThree {
+        margin: 5px 0px 5px 0px; } }
+  .galleryTable .pictureFour {
+    background: url(../img/gallery_4.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 215px;
+    margin: 5px 10px 0; }
+    @media (max-width: 768px) {
+      .galleryTable .pictureFour {
+        margin: 5px 5px 5px 0px; } }
+    @media (max-width: 576px) {
+      .galleryTable .pictureFour {
+        margin: 5px 0px 5px 0px; } }
+  .galleryTable .pictureFive {
+    background: url(../img/gallery_5.jpg) center center no-repeat;
+    background-size: cover;
+    min-height: 215px;
+    margin-top: 5px; }
+    @media (max-width: 768px) {
+      .galleryTable .pictureFive {
+        margin: 5px 0px 5px 5px; } }
+
+.galleryButton {
+  margin: 60px 0 140px;
+  height: 50px;
+  width: 190px;
+  border: 1px solid #2c4058;
+  font-size: 14px;
+  font-family: "gothamBook";
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 50px;
+  color: #2c4058;
+  text-transform: uppercase;
+  text-align: center; }
+  @media (max-width: 768px) {
+    .galleryButton {
+      margin: 40px 0px; } }
+  @media (max-width: 576px) {
+    .galleryButton {
+      margin: 20px 0px; } }
+  .galleryButton:hover {
+    box-shadow: inset 1px 1px 20px 0px #5d1fec;
+    font-size: 18px;
+    border: 1px solid #5d1fec; }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .contact .mapouter {
+    position: relative;
+    text-align: right;
+    height: 100%;
+    width: 100%; }
+  .contact #gmap_canvas {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    height: 600px; }
+    @media (max-width: 576px) {
+      .contact #gmap_canvas {
+        max-height: 400px; } }
+
+.footerBackground {
+  height: 525px;
+  background: linear-gradient(45deg, rgba(87, 185, 255, 0.65) 0%, rgba(123, 87, 255, 0.65) 100%), url(../img/footer_bg.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-family: "gotham";
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 22px;
+  color: #ffffff; }
+  @media (max-width: 768px) {
+    .footerBackground {
+      height: 300px; } }
+  @media (max-width: 576px) {
+    .footerBackground {
+      height: 200px; } }
+  .footerBackground .social {
+    display: flex;
+    align-items: center; }
+    .footerBackground .social .s-logo {
+      min-height: 40px;
+      min-width: 40px;
+      border: 1px solid #d7d1ee;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px; }
+      .footerBackground .social .s-logo a {
+        color: #fff; }
+    .footerBackground .social :hover {
+      border: none;
+      transform: scale(1.2); }
+      .footerBackground .social :hover a {
+        color: #5d1fec; }
+    .footerBackground .social .tw {
+      margin: 0 20px; }
+  .footerBackground .footerText {
+    display: flex; }
+    @media (max-width: 576px) {
+      .footerBackground .footerText {
+        flex-direction: column; } }
+    .footerBackground .footerText .copyright {
+      border-right: 1px solid #b1cfff; }
+      @media (max-width: 576px) {
+        .footerBackground .footerText .copyright {
+          border: none;
+          text-align: center; } }
+    @media (max-width: 576px) {
+      .footerBackground .footerText .made {
+        text-align: center; } }

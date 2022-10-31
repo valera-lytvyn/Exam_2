@@ -1,0 +1,136 @@
+.news {
+
+   .newsBackground {
+      @include size($h, $w);
+      min-height: 1050px;
+      background: url(../img/news_bg.png) no-repeat bottom center,
+         linear-gradient(45deg, hsla(213, 63%, 53%, 0.65) 0%, hsla(193, 95%, 56%, 0.65) 100%);
+      background-size: contain;
+      position: relative;
+
+      .arrowLeft {
+         position: absolute;
+         top: 50%;
+         left: 20px;
+
+         & :hover {
+            color: $color_purple;
+            border: none;
+            transform: scale(1.2);
+         }
+      }
+
+      .circle {
+         @include size(40px, 40px);
+         border: 1px solid #d7d1ee;
+         border-radius: 50%;
+         text-align: center;
+         line-height: 40px;
+         color: #fff;
+
+         @include _992 {
+            border: 1px solid $color_purple;
+            color: $color_purple;
+         }
+
+         @include _768 {
+            display: none;
+         }
+      }
+
+      .newsTitle {
+         margin: 180px 0 100px 0;
+         @include font(44px, $ff, 500, normal, 22px, $color_fff);
+         text-transform: uppercase;
+         text-align: center;
+
+         @include _768 {
+            font-size: 28px;
+            margin: 40px 0;
+         }
+
+         @include _576 {
+            font-size: 24px;
+         }
+      }
+
+      .arrowRight {
+         position: absolute;
+         top: 50%;
+         right: 25px;
+
+         & :hover {
+            color: $color_purple;
+            border: none;
+            transform: scale(1.2);
+         }
+      }
+
+      .newscolumn {
+         background-color: $color_fff;
+         min-height: 600px;
+
+         .newscolumnPhotoOne {
+            min-height: 240px;
+            background: url(../img/news_photo_1.jpg) center center no-repeat;
+            background-size: cover
+         }
+
+         .newscolumnPhotoTwo {
+            min-height: 240px;
+            background: url(../img/news_photo_2.jpg) center center no-repeat;
+            background-size: cover
+         }
+
+         .newscolumnPhotoThree {
+            min-height: 240px;
+            background: url(../img/news_photo_3.jpg) center center no-repeat;
+            background-size: cover
+         }
+
+         .newsDescription {
+            @include size($h, calc(100% - 75px));
+            min-height: 300px;
+            margin: 30px 55px 30px 20px;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+
+            .newscolumnTitle {
+               @include font(22px, $ff, 700, normal, 22px, $color_dblue);
+               text-transform: uppercase;
+            }
+
+            .newscolumnText {
+               @include font(18px, "Open Sans", 400, normal, 30px, $color_dgrey);
+            }
+
+            .information {
+               width: 100%;
+               display: flex;
+
+               .infoWrap {
+                  display: flex;
+                  flex-direction: column;
+               }
+
+               .autorPhoto {
+                  min-width: 60px;
+                  margin-right: 10px
+               }
+
+               .autorName {
+                  @include font(18px, $ff, 400, normal, 22px, $color_dblue);
+                  text-transform: uppercase;
+               }
+
+               .data {
+                  @include font(14px, $ff, 400, normal, 22px, $color_blue);
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,155 @@
+.galleryTitle {
+   @include font(44px, $ff, 500, normal, 22px, $color_dblue);
+   text-transform: uppercase;
+   text-align: center;
+   margin: 180px 0 100px;
+
+   @include _768 {
+      font-size: 28px;
+      margin: 40px 0;
+   }
+
+   @include _576 {
+      font-size: 24px;
+      margin: 20px 0;
+   }
+}
+
+.galleryTable {
+   @include size($h, $w);
+
+   .pictureOne {
+      background: url(../img/gallery_1.jpg) center center no-repeat;
+      background-size: cover;
+      min-height: 440px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include _576 {
+         min-height: 215px;
+      }
+
+      .logo_360 {
+         @include size(80px, 80px);
+         @include display($df, $jc, $ai);
+         border: 3px solid $color_fe;
+         border-radius: 50%;
+         position: relative;
+
+         .vOval {
+            @include size(78px, 40px);
+            @include display($df, $jc, $ai);
+            border: 2px solid rgb(234, 240, 240);
+            border-radius: 50%;
+            position: absolute;
+         }
+
+         .gOval {
+            @include size(40px, 78px);
+            @include display($df, $jc, $ai);
+            border: 2px solid rgb(234, 240, 240);
+            border-radius: 50%;
+            @include font(22px, $ff, 700, normal, 22px, rgb(234, 240, 240));
+            text-align: center;
+         }
+
+         &:hover .gOval {
+            cursor: default;
+            transform: rotate(360deg);
+            transition: all 0.8s ease-in-out 0s;
+            font-size: 30px;
+            color: $color_purple;
+         }
+
+         &:hover .vOval {
+            cursor: default;
+            transform: rotate(360deg);
+            transition: all 0.8s ease-in-out 0s;
+            font-size: 30px;
+         }
+      }
+   }
+
+   .pictureTwo {
+      background: url(../img/gallery_2.jpg) center center no-repeat;
+      background-size: cover;
+      min-height: 215px;
+      margin: 0 10px 5px 10px;
+
+      @include _768 {
+         margin: 10px 5px 5px 0px;
+      }
+
+      @include _576 {
+         margin: 10px 0px 5px 0px;
+      }
+   }
+
+   .pictureThree {
+      background: url(../img/gallery_3.jpg) center center no-repeat;
+      background-size: cover;
+      min-height: 215px;
+      margin-bottom: 5px;
+
+      @include _768 {
+         margin: 10px 0px 5px 5px;
+      }
+
+      @include _576 {
+         margin: 5px 0px 5px 0px;
+      }
+
+   }
+
+   .pictureFour {
+      background: url(../img/gallery_4.jpg) center center no-repeat;
+      background-size: cover;
+      min-height: 215px;
+      margin: 5px 10px 0;
+
+      @include _768 {
+         margin: 5px 5px 5px 0px;
+      }
+
+      @include _576 {
+         margin: 5px 0px 5px 0px;
+      }
+   }
+
+   .pictureFive {
+      background: url(../img/gallery_5.jpg) center center no-repeat;
+      background-size: cover;
+      min-height: 215px;
+      margin-top: 5px;
+
+      @include _768 {
+         margin: 5px 0px 5px 5px;
+      }
+   }
+}
+
+.galleryButton {
+   margin: 60px 0 140px;
+   @include size(50px, 190px);
+   border: 1px solid $color_dblue;
+   @include font(14px, $ffBook, 400, normal, 50px, $color_dblue);
+   text-transform: uppercase;
+   text-align: center;
+
+   @include _768 {
+      margin: 40px 0px;
+   }
+
+   @include _576 {
+      margin: 20px 0px;
+   }
+
+   &:hover {
+      box-shadow: inset 1px 1px 20px 0px $color_purple;
+      font-size: 18px;
+      border: 1px solid $color_purple;
+
+   }
+
+}

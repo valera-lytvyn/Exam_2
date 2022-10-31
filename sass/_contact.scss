@@ -1,0 +1,94 @@
+.contact {
+   @include display($df, $jc, $ai);
+
+   .mapouter {
+      position: relative;
+      text-align: right;
+      @include size($h, $w);
+      // min-height: 600px;
+   }
+
+   #gmap_canvas {
+      overflow: hidden;
+      @include size($h, $w);
+      height: 600px;
+
+      @include _576 {
+         max-height: 400px;
+      }
+   }
+}
+
+.footerBackground {
+   height: 525px;
+   background: linear-gradient(45deg, hsla(205, 100%, 67%, 0.65) 0%, hsla(253, 100%, 67%, 0.65) 100%),
+      url(../img/footer_bg.jpg) no-repeat center center;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+   @include font(14px, $ff, 400, normal, 22px, $color_fff);
+
+   @include _768 {
+      height: 300px;
+   }
+
+   @include _576 {
+      height: 200px;
+   }
+
+   .social {
+      display: flex;
+      // justify-content: end;
+      align-items: center;
+
+      .s-logo {
+         // @include size(40px, 40px);
+         min-height: 40px;
+         min-width: 40px;
+         border: 1px solid #d7d1ee;
+         border-radius: 50%;
+         text-align: center;
+         line-height: 40px;
+
+         a {
+            color: #fff;
+         }
+      }
+
+      & :hover {
+         border: none;
+         transform: scale(1.2);
+
+         a {
+            color: $color_purple;
+         }
+      }
+
+      .tw {
+         margin: 0 20px;
+      }
+   }
+
+   .footerText {
+      display: flex;
+
+      @include _576 {
+         flex-direction: column;
+      }
+
+      .copyright {
+         border-right: 1px solid #b1cfff;
+
+         @include _576 {
+            border: none;
+            text-align: center;
+         }
+      }
+
+      .made {
+         @include _576 {
+            text-align: center;
+         }
+      }
+   }
+}
